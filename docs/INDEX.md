@@ -11,6 +11,15 @@
 | **What is Pantheon?** | [README.md](../README.md) |
 | **Quick start / Install** | [INSTALLATION.md](INSTALLATION.md) |
 | **Which platform to pick** | [PLATFORMS.md](PLATFORMS.md) |
+| **How a feature flows** | [WORKFLOW.md](WORKFLOW.md) |
+| **Why 14 agents** | [PRINCIPLES.md](PRINCIPLES.md) |
+| **Commands** | [COMMANDS.md](COMMANDS.md) |
+| **Model tiers & presets** | [MODEL-TIERS.md](MODEL-TIERS.md) |
+| **Maintaining & extending** | [MAINTAINING.md](MAINTAINING.md) |
+| **Security & privacy** | [SECURITY.md](SECURITY.md) |
+| **Repository layout** | [REPOSITORY-STRUCTURE.md](REPOSITORY-STRUCTURE.md) |
+| **v4.0 notes** | [RELEASE-4.0.md](RELEASE-4.0.md) |
+| **FAQ** | [FAQ.md](FAQ.md) |
 | **Agent reference** | [AGENTS.md](../AGENTS.md) |
 | **MCP tiers & tools** | [mcp-tools.md](mcp-tools.md), [mcp-user-guide.md](mcp-user-guide.md) |
 | **Release process** | [RELEASING.md](RELEASING.md) |

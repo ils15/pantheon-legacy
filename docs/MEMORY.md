@@ -9,6 +9,52 @@ embeddings). All 14 tools are accessible via the `pantheon-memory` MCP server.
 
 ---
 
+## Memory Layers: where context lives
+
+Content originally published in the v4.0 root README. Pantheon keeps context in three
+layers with different costs:
+
+| Tier | Location | Content | Access Cost |
+|---|---|---|---|
+| **Tier 1 — Native** | `/memories/repo/` | Atomic facts (stack, conventions, commands) | Zero (auto-loaded) |
+| **Tier 2 — Reference** | `.pantheon/memory-bank/` | Project overview, architecture, active sprint, decisions | Read cost per file |
+| **Session** | `/memories/session/` | Current conversation plans, work-in-progress | One read per session |
+
+### Tier 1 — Auto-indexed memory (`/memories/repo/`)
+
+Agent memory is indexed automatically at zero token cost. Every agent writes atomic
+facts on discovery: tech stack, conventions, build commands, architectural decisions
+and patterns, cross-component relationships.
+
+### Tier 2 — Compressed context (`.pantheon/memory-bank/`)
+
+On-demand compression archives completed phases into structured context:
+
+- **Priority scoring** — CRITICAL/HIGH/LOW budget allocation (deterministic, no LLM)
+- **ZZ artifacts** — compressed phase context for agent-to-agent handoff
+- **Cross-reference index** (`_xref/index.md`) — entity/decision lookup
+
+`01-active-context.md` is the priority file. Agents read it first when starting any
+task: it holds the current sprint focus, the most recent architectural decision, active
+blockers, and next steps. Architectural decisions are recorded as ADRs in
+`.pantheon/memory-bank/_notes/` and committed to the repository.
+
+### Usage
+
+```bash
+@mnemosyne Recall "<feature description>" --top-k 5   # Retrieve past decisions
+@mnemosyne Close sprint: "<summary>"                    # Archive and compress
+```
+
+### Benefits
+
+- No lost context between phases
+- Past decisions surface automatically before planning
+- Zero manual memory management — agents self-index
+- Lossless recovery via git
+
+---
+
 ## How Memory Works
 
 ### Architecture

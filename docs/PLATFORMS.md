@@ -27,6 +27,22 @@ Pantheon's 14 agents are authored once in `agents/` (VS Code `.agent.md` format)
 
 ---
 
+## Feature support matrix (v4.0)
+
+Originally published in the v4.0 root README; complements the comparison table above.
+
+| Feature | VS Code | OpenCode | Claude Code | Cursor | Windsurf | Cline | Continue.dev |
+|---------|:-------:|:--------:|:-----------:|:-----:|:--------:|:-----:|:------------:|
+| Custom Agents | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Skills System | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Parallel Execution | ✅ | ✅ | ⚠️ | ✅ | ❌ | ⚠️ | ⚠️ |
+| Handoff UI | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| MCP Servers | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ |
+| Agent Hooks | ✅ | ⚠️ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Status | ✅ Active | ✅ Active | ✅ Active | ✅ Active | ✅ Active | ✅ Active | ✅ Active |
+
+---
+
 ## Which Platform Should I Pick?
 
 ### VS Code Copilot — Best for teams
